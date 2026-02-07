@@ -16,10 +16,12 @@ public class ApiResponse<T> {
     private Object error;
 
     public static <T> ApiResponse<T> success(T data) {
+
         return new ApiResponse<>(true, data, null);
     }
 
     public static ApiResponse<Object> failure(Object error) {
+
         return new ApiResponse<>(false, null, error);
     }
 }
